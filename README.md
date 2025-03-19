@@ -1,6 +1,6 @@
 ##Link Webblog Portofolio
 
-https://portofolio-pink-omega.vercel.app/
+https://portofolio-fariz.vercel.app/
 
 ##Link Webblog Materi 
 
