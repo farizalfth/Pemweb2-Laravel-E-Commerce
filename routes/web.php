@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomepageController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function(){
@@ -36,3 +37,12 @@ Route::get('checkout', function(){
     $title = "Checkout";
     return view('web.checkout',['title'=>$title]);
     });
+
+## Kode baru diubah menjadi seperti ini
+Route::get('/', [HomepageController::class, 'index']);
+Route::get('products', [HomepageController::class, 'products']);
+Route::get('product/{slug}', [HomepageController::class, 'product']);
+Route::get('category', [HomepageController::class, 'categories'])->name('categories');
+Route::get('category/{slug}', [HomepageController::class, 'category'])->name('category.show');
+Route::get('cart', [HomepageController::class, 'cart']);
+Route::get('checkout', [HomepageController::class, 'checkout']);
